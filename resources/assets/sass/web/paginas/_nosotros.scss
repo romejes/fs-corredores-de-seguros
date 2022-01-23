@@ -1,0 +1,86 @@
+@import '../variables';
+
+main {
+  section {
+    article {
+      margin-bottom: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      ul.fa-ul {
+        margin-left: 1.5em;
+      }
+
+      ul.values-list {
+        list-style: none;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+
+    .staff-card-container {
+      .card {
+        width: 100%;
+        background-color: $azul-fs;
+        color: white;
+        padding: 0 1em;
+        .card-body {
+          .data-staff-grid {
+            display: grid;
+            grid-template-columns: 50px calc(100% - 50px);
+            align-items: center;
+            overflow-wrap: break-word;
+            .data-staff-info-cell {
+              i {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    img#quienes_somos-picture {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    section {
+      .staff-card-container {
+        .card {
+          width: 325px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    section {
+      .staff-card-container {
+        .card {
+          width: 360px;
+        }
+      }
+     
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    section {
+      .staff-card-container {
+        .card {
+          width: 400px;
+        }
+      }
+    }
+  }
+}

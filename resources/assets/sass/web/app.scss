@@ -1,0 +1,23 @@
+@import './fuentes';
+@import './util';
+
+//  Plantilla
+@import './plantillas/principal';
+
+//  Componentes
+@import './componentes/carousel';
+@import './componentes/section';
+@import './componentes/button';
+@import './componentes/banner';
+@import './componentes/form';
+@import './componentes/card';
+@import './componentes/tables';
+@import "./componentes/sw-alert";
+@import "./componentes/wizard";
+
+//  Paginas
+@import './paginas/inicio';
+@import './paginas/nosotros';
+@import './paginas/contacto';
+@import './paginas/clientes';
+@import './paginas/seguros-servicios';

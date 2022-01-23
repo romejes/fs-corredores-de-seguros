@@ -1,0 +1,14 @@
+@import '~admin-lte/build/scss/AdminLTE.scss';
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+
+@import '~bootstrap-table/src/bootstrap-table.scss';
+@import '~@sweetalert2/theme-minimal/minimal.scss';
+
+@media (min-width: 992px) {
+  .sidebar-mini .nav-sidebar .nav-link {
+    white-space: normal;
+  }
+}

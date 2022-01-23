@@ -1,0 +1,26 @@
+main {
+  .seguros-cards-container {
+    .card {
+      max-width: 250px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .wrapper-companias_seguro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    img.logo-compania_seguro {
+      height: auto;
+      width: 160px;
+      margin: 3em 2em;
+      filter: grayscale(100%);
+      &:hover {
+        filter: grayscale(0);
+        transition: filter 0.5s;
+      }
+    }
+  }
+}

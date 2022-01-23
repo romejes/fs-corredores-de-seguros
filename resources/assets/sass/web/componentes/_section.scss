@@ -1,0 +1,15 @@
+@import '../variables';
+
+main {
+  section {
+    background-color: white;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    overflow-x: hidden;
+    h2 {
+      font-size: $encabezado2;
+      font-family: $fuente-titulo;
+      margin-top: 0;
+    }
+  }
+}

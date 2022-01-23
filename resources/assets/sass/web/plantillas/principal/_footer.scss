@@ -1,0 +1,85 @@
+@import '../../variables';
+
+footer {
+  section#footer-main {
+    background-color: $rojo-fs;
+    color: white;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    [class*='col-'] {
+      margin-bottom: 2em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h3 {
+      font-family: $fuente-titulo;
+      margin-top: 1em;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: $azul-fs;
+        width: 40%;
+        height: 3px;
+        left: 0;
+        bottom: -10px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      li {
+        margin-bottom: 5px;
+        a {
+          color: white;
+          display: block;
+        }
+      }
+    }
+
+    .office-grid {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 40px calc(100% - 40px);
+      align-items: center;
+      overflow-wrap: break-word;
+      row-gap: 5px;
+    }
+
+    .supervised {
+      width: 100%;
+      text-align: center;
+      img#img-logo-sbs {
+        width: 150px;
+        height: auto;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  section#footer-copyright {
+    background-color: $rojo-alt-fs;
+    p {
+      font-size: 0.8rem;
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    section#footer-main {
+      [class*='col-'] {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

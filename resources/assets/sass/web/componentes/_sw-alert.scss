@@ -1,0 +1,18 @@
+@import './button';
+@import '../variables';
+
+.swal2-container {
+  .swal2-header {
+    .swal2-title {
+      color: $azul-fs;
+    }
+  }
+
+  .swal2-actions {
+    .swal2-styled {
+      &.swal2-confirm {
+        @include paint-button($azul-fs, white, $azul-fs);
+      }
+    }
+  }
+}

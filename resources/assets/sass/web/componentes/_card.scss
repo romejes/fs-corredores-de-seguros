@@ -1,0 +1,42 @@
+@import '~bootstrap/scss/card';
+
+@import '../variables';
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .card {
+    margin: 1em;
+    .card-title {
+      font-family: $fuente-parrafo;
+      font-weight: 700;
+      color: $azul-fs;
+    }
+    .card-title,
+    .card-text {
+      text-align: center;
+    }
+
+    .card-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-top-width: 0px;
+      background-color: white;
+      .button {
+        margin: 5px;
+      }
+    }
+  }
+}

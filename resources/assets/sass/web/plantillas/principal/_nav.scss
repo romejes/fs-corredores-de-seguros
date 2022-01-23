@@ -1,0 +1,159 @@
+@import '../../variables';
+
+nav {
+  ul.menu {
+    max-height: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    padding: 1em;
+    font-size: 1.05rem;
+    font-family: $fuente-titulo;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+nav.navbar-desktop {
+  display: none;
+}
+
+nav.navbar-mobile {
+  display: none;
+
+  &.show {
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+    bottom: 0;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    top: 72px;
+    z-index: 10;
+    overflow-y: auto;
+
+    a {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul.menu {
+      padding-left: 0;
+      > li {
+        > a {
+          border-top: thin solid rgba(196, 196, 196, 0.4);
+          &.active {
+            color: $rojo-fs;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  nav.navbar-desktop {
+    display: block;
+
+    ul.menu {
+      text-align: left;
+      height: 100%;
+
+      > li {
+        border-bottom: none;
+        height: 100%;
+        display: inline-flex;
+        align-items: center;
+        > a {
+          font-family: $fuente-titulo;
+          color: $azul-fs;
+          background-color: white;
+          transition: color 0.3s;
+          &:hover {
+            color: $rojo-fs;
+            transition: color 0.3s;
+          }
+          &.active {
+            color: white;
+            background-color: $azul-fs;
+            border-radius: 4px;
+          }
+        }
+
+        &.open-submenu {
+          > a {
+            color: $rojo-fs;
+          }
+        }
+      }
+    }
+
+    .submenu {
+      position: absolute;
+      display: none;
+      z-index: 10;
+      top: calc(100%);
+      left: 1em;
+      right: 1em;
+      margin: 0;
+      border-radius: 0px;
+      border-top: 10px solid transparent;
+
+      .menu-tab {
+        background-color: rgba(70, 94, 137, 1);
+        padding-bottom: 1em;
+        padding-top: 1em;
+        padding-right: 0;
+        flex-direction: column;
+        a {
+          color: white;
+          padding-top: 1em;
+          padding-bottom: 1em;
+
+          &.active {
+            background-color: $rojo-fs;
+          }
+        }
+      }
+
+      .tab-content {
+        background-color: rgba(255, 255, 255);
+        padding-bottom: 1em;
+        padding-top: 1em;
+        ul {
+          columns: 2;
+          column-gap: 1em;
+          margin-left: 0;
+          padding-left: 0;
+          li {
+            a {
+              color: $azul-fs;
+              padding-top: 1em;
+              padding-bottom: 1em;
+              color: $fuente-parrafo;
+              &:hover {
+                color: $rojo-fs;
+              }
+            }
+          }
+        }
+      }
+
+      &.show {
+        display: flex;
+      }
+    }
+  }
+
+  nav.navbar-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,69 @@
+@import '../variables';
+
+main {
+  #seguro-info-container,
+  #servicio-detail-container {
+    h2,
+    h3,
+    h4 {
+      color: $azul-fs;
+    }
+    article {
+      margin-bottom: 3em;
+    }
+  }
+
+  .wizard {
+    #btn-send {
+      margin: 0;
+    }
+  }
+
+  .compra_soat-insurance-companies {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 2em;
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    #seguros-list,
+    #servicios-list {
+      h4 {
+        color: $azul-fs;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+      }
+
+      ul {
+        margin-bottom: 2em;
+        margin-top: 0;
+        list-style: none;
+        padding-left: 0;
+        li {
+          border-left: 3px solid $azul-fs;
+          padding-left: 1em;
+          padding-top: 0.25em;
+          padding-bottom: 0.25em;
+          a {
+            display: inherit;
+            color: $azul-fs;
+          }
+          &.active {
+            border-left-color: $rojo-fs;
+            a {
+              color: $rojo-fs;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

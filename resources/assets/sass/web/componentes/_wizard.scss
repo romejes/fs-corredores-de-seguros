@@ -1,0 +1,36 @@
+@import './button';
+
+.sw {
+  > .nav {
+    overflow-y: auto;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    .nav-link {
+      &:before,
+      &:after {
+        z-index: 1;
+      }
+    }
+  }
+  .toolbar {
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    > .btn {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      @extend .button;
+      @extend .button-primary;
+    }
+  }
+} 
+
+@media (min-width: 992px) {
+  .sw{
+    .toolbar{
+      justify-content: flex-end;
+    }
+  }
+}
